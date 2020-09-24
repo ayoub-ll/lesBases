@@ -5,7 +5,7 @@ using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ListeChainée
+namespace ListeChainee
 {
     class Element
     {
@@ -74,7 +74,6 @@ namespace ListeChainée
         }
 
         // (1, (2,3))
-        /*
         public void InsérerFin(Object objet)
         {
             if (this._Début == null)
@@ -84,26 +83,6 @@ namespace ListeChainée
             {
                 this.InsérerFin(_Début.Suivant);
             }
-        }
-        */
-
-        public void InsérerFin(Object objet, Element current = null)
-        {
-            if (this._Début == null)
-            {
-                this._Début = new Element(objet);
-            }
-            if (current == null)
-            {
-                current = this._Début;
-            }
-            if (current.Suivant != null)
-            {
-                InsérerFin(objet, current.Suivant);
-            }
-            current.Suivant = new Element(objet);
-            this._NbEléments++;
-
         }
 
         public void Lister()
