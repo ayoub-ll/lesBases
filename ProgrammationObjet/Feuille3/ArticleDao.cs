@@ -40,5 +40,16 @@ namespace Feuille3
             return this.listeArticles.Where(a => a._nom.Equals(nom)).Select(a => new Tuple<int, int>(a._quantite, a._prix))
                 .FirstOrDefault();
         }
+
+        /* 3.6 - Agregations */
+        public string getArticleQuantiteMinMaxAndAverage()
+        {
+            StringBuilder res = new StringBuilder();
+            res.AppendLine("Articles quantite MIN: " + this.listeArticles.Min(a => a._quantite));
+            res.AppendLine("Articles quantite MAX: " + this.listeArticles.Max(a => a._quantite));
+            res.AppendLine("Prix moyen: " + this.listeArticles.Average(a => a._prix));
+
+            return res.ToString();
+        }
     }
 }

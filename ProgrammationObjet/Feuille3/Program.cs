@@ -83,7 +83,19 @@ namespace Feuille3
         /* 3.5 - Requête à double valeur de retour */
         public void AfficherQuantiteEtPrix()
         {
-            articleDao.getArticleInfo1("Article 5");
+            articleDao.getArticleQuantiteAndPrix("Article 5");
+        }
+
+        /* 3.6 - Requête à double valeur de retour avec TUPLE */
+        public void AfficherQuantiteEtPrixTuple()
+        {
+            articleDao.getArticleQuantiteAndPrixTuple("Article 5");
+        }
+
+        /* 3.6 - Agregations */
+        public void AfficherQuantiteMinMaxEtPrixMoyen()
+        {
+            articleDao.getArticleQuantiteMinMaxAndAverage();
         }
     }
 }

@@ -12,5 +12,6 @@ namespace Feuille3
         List<Article> getArticles();
         (int, int) getArticleQuantiteAndPrix(string nom);
         Tuple<int, int> getArticleQuantiteAndPrixTuple(string nom);
+        string getArticleQuantiteMinMaxAndAverage();
     }
 }
