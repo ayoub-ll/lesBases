@@ -10,6 +10,7 @@ namespace Feuille3
     {
         Article getArticleById(int id);
         List<Article> getArticles();
-        (int, int) getArticleInfo1(string nom);
+        (int, int) getArticleQuantiteAndPrix(string nom);
+        Tuple<int, int> getArticleQuantiteAndPrixTuple(string nom);
     }
 }

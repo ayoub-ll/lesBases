@@ -26,12 +26,19 @@ namespace Feuille3
         }
 
         /* 3.5 - Requête à double valeur de retour */
-        public (int, int) getArticleInfo1(string nom)
+        public (int, int) getArticleQuantiteAndPrix(string nom)
         {
             var ret =  this.listeArticles.Where(a => a._nom.Equals(nom)).Select(a => new { a._quantite, a._prix })
                 .FirstOrDefault();
 
             return (ret._quantite, ret._prix);
+        }
+
+        /* 3.6 - Requête à double valeur de retour avec TUPLE */
+        public Tuple<int, int> getArticleQuantiteAndPrixTuple(string nom)
+        {
+            return this.listeArticles.Where(a => a._nom.Equals(nom)).Select(a => new Tuple<int, int>(a._quantite, a._prix))
+                .FirstOrDefault();
         }
     }
 }
