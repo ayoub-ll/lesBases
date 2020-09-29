@@ -24,5 +24,14 @@ namespace Feuille3
         {
             return this.listeArticles;
         }
+
+        /* 3.5 - Requête à double valeur de retour */
+        public (int, int) getArticleInfo1(string nom)
+        {
+            var ret =  this.listeArticles.Where(a => a._nom.Equals(nom)).Select(a => new { a._quantite, a._prix })
+                .FirstOrDefault();
+
+            return (ret._quantite, ret._prix);
+        }
     }
 }

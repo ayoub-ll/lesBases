@@ -10,5 +10,6 @@ namespace Feuille3
     {
         Article getArticleById(int id);
         List<Article> getArticles();
+        (int, int) getArticleInfo1(string nom);
     }
 }

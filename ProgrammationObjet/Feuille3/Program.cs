@@ -9,6 +9,8 @@ namespace Feuille3
 {
     class Program
     {
+        IArticleDao articleDao = new ArticleDao();
+
         static void Main(string[] args)
         {
             Program prog = new Program();
@@ -69,10 +71,19 @@ namespace Feuille3
         /* 3.4 - DAO */
         public void AfficherArticles()
         {
-            IArticleDao articleDao = new ArticleDao();
             Console.WriteLine(articleDao.getArticleById(2));
-            Console.Write(articleDao.getArticles());
+
+
+            /* Toute la liste */
+            foreach (Article article in articleDao.getArticles())
+                Console.WriteLine(article);
             Console.ReadLine();
+        }
+
+        /* 3.5 - Requête à double valeur de retour */
+        public void AfficherQuantiteEtPrix()
+        {
+            articleDao.getArticleInfo1("Article 5");
         }
     }
 }
