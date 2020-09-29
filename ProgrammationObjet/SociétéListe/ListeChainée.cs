@@ -101,9 +101,8 @@ namespace ListeChainée
             {
                 InsérerFin(objet, current.Suivant);
             }
-            current.Suivant = new Element(objet);
+            //current.Suivant = new Element(objet);
             this._NbEléments++;
-
         }
 
         public void Lister()

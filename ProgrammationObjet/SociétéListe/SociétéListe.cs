@@ -41,9 +41,9 @@ namespace SociétéListe
             liste.InsérerFin(new Employé("nom2", "prenom2", 2, 1500));
             liste.InsérerFin(new Employé("nom3", "prenom3", 3, 1500));
 
-            /*liste.InsérerFin(new Employé("nom3", "prenom3", 3, 1500));
+            liste.InsérerFin(new Employé("nom3", "prenom3", 3, 1500));
             liste.InsérerFin(new Employé("nom4", "prenom4", 4, 1500));
-            liste.InsérerFin(new Employé("nom5", "prenom5", 5, 1500));
+            /*liste.InsérerFin(new Employé("nom5", "prenom5", 5, 1500));
             liste.InsérerFin(new Chef("nom6", "prenom4", 4, 1500, "manutention"));
             liste.InsérerFin(new Chef("nom7", "prenom5", 5, 1500, "cartons"));
             liste.InsérerFin(new Directeur("nom8", "prenom4", 4, 1500, "cartons", "IT SOCIETY"));
