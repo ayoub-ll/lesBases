@@ -92,7 +92,7 @@ namespace Feuille3
             articleDao.getArticleQuantiteAndPrixTuple("Article 5");
         }
 
-        /* 3.6 - Agregations */
+        /* 3.7 - Agregations */
         public void AfficherQuantiteMinMaxEtPrixMoyen()
         {
             articleDao.getArticleQuantiteMinMaxAndAverage();

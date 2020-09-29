@@ -41,7 +41,7 @@ namespace Feuille3
                 .FirstOrDefault();
         }
 
-        /* 3.6 - Agregations */
+        /* 3.7 - Agregations */
         public string getArticleQuantiteMinMaxAndAverage()
         {
             StringBuilder res = new StringBuilder();
